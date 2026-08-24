@@ -1,0 +1,57 @@
+[
+  {
+    "id": "SH-001",
+    "name": "Govt. Higher Secondary School, Narmadapuram Rd",
+    "lat": 23.2599,
+    "lng": 77.4126,
+    "capacity": 400,
+    "occupied": 40,
+    "medicalStock": "high",
+    "waterStock": "high",
+    "status": "open"
+  },
+  {
+    "id": "SH-002",
+    "name": "Community Hall, Bairagarh",
+    "lat": 23.2925,
+    "lng": 77.3775,
+    "capacity": 250,
+    "occupied": 10,
+    "medicalStock": "medium",
+    "waterStock": "high",
+    "status": "open"
+  },
+  {
+    "id": "SH-003",
+    "name": "Panchayat Bhavan, Kolar",
+    "lat": 23.1793,
+    "lng": 77.4234,
+    "capacity": 180,
+    "occupied": 0,
+    "medicalStock": "medium",
+    "waterStock": "medium",
+    "status": "open"
+  },
+  {
+    "id": "SH-004",
+    "name": "District Sports Stadium",
+    "lat": 23.2339,
+    "lng": 77.4384,
+    "capacity": 600,
+    "occupied": 0,
+    "medicalStock": "high",
+    "waterStock": "high",
+    "status": "open"
+  },
+  {
+    "id": "SH-005",
+    "name": "Govt. Primary School, Bagsevania",
+    "lat": 23.2114,
+    "lng": 77.4581,
+    "capacity": 150,
+    "occupied": 0,
+    "medicalStock": "low",
+    "waterStock": "medium",
+    "status": "open"
+  }
+]

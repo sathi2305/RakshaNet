@@ -1,0 +1,38 @@
+[
+  {
+    "id": "RT-01",
+    "name": "NDRF Rapid Response Unit 1",
+    "type": "Search & Rescue",
+    "lat": 23.2504,
+    "lng": 77.4000,
+    "status": "available",
+    "assignedShelterId": null
+  },
+  {
+    "id": "RT-02",
+    "name": "District Medical Response Team",
+    "type": "Medical",
+    "lat": 23.2700,
+    "lng": 77.4300,
+    "status": "available",
+    "assignedShelterId": null
+  },
+  {
+    "id": "RT-03",
+    "name": "Civil Defence Volunteer Squad",
+    "type": "Evacuation Support",
+    "lat": 23.2200,
+    "lng": 77.3900,
+    "status": "available",
+    "assignedShelterId": null
+  },
+  {
+    "id": "RT-04",
+    "name": "State Boat & Flood Rescue Team",
+    "type": "Water Rescue",
+    "lat": 23.2850,
+    "lng": 77.4450,
+    "status": "available",
+    "assignedShelterId": null
+  }
+]

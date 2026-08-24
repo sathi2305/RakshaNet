@@ -1,0 +1,28 @@
+{
+  "district": "Bhopal (demo district)",
+  "riverSensors": [
+    {
+      "id": "RS-14",
+      "name": "Kolans River Gauge, Kolar",
+      "lat": 23.1850,
+      "lng": 77.4180,
+      "normalLevelM": 2.1,
+      "dangerLevelM": 4.5,
+      "currentLevelM": 2.3
+    },
+    {
+      "id": "RS-22",
+      "name": "Halali River Gauge, Bairagarh",
+      "lat": 23.2870,
+      "lng": 77.3820,
+      "normalLevelM": 1.8,
+      "dangerLevelM": 4.0,
+      "currentLevelM": 1.9
+    }
+  ],
+  "weatherForecast": {
+    "source": "IMD (mock feed)",
+    "next6hRainfallMm": 38,
+    "heavyRainThresholdMm": 100
+  }
+}
