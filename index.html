@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>RakshaNet — Citizen Safety App</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">
+    <span class="dot"></span>
+    <div>
+      RakshaNet
+      <small>Citizen Safety App — Disaster Preparedness &amp; Emergency Response</small>
+    </div>
+  </div>
+  <div class="topbar-actions">
+    <select id="langSelect" class="lang-select">
+      <option value="en">English</option>
+      <option value="hi">हिंदी</option>
+      <option value="mr">मराठी</option>
+    </select>
+    <a href="dashboard.html" class="btn btn-secondary">Admin Dashboard →</a>
+  </div>
+</div>
+
+<div class="container">
+
+  <div id="alertBanner" class="alert-banner">
+    <span class="tag" id="alertChannelTag">MULTI-CHANNEL ALERT</span>
+    <h2 id="alertTitle">—</h2>
+    <p id="alertBody">—</p>
+  </div>
+
+  <div class="grid grid-2">
+    <div class="card">
+      <div class="section-title">Nearest Shelters &amp; Live Map</div>
+      <div id="citizen-map"></div>
+    </div>
+
+    <div class="card">
+      <div class="section-title">Safety Check-In</div>
+      <p style="color:var(--muted); font-size:14px;">Let responders know you're safe. This updates the live district dashboard instantly.</p>
+      <input id="citizenName" type="text" placeholder="Your name (optional)"
+        style="width:100%; padding:10px; border:1px solid var(--border); border-radius:8px; margin-bottom:10px;" />
+      <button class="btn btn-primary" id="checkinBtn" style="width:100%;">✅ I'm Safe — Check In</button>
+      <div id="checkinConfirm" style="margin-top:10px; color:var(--green); font-weight:600; font-size:13px; display:none;">
+        Check-in received. Thank you — stay safe.
+      </div>
+
+      <hr style="margin:20px 0; border:none; border-top:1px solid var(--border);" />
+
+      <div class="section-title">Community Check-Ins</div>
+      <div class="stat-row" style="margin-bottom:0;">
+        <div class="stat-card">
+          <div class="value" id="checkinCount">0</div>
+          <div class="label">People marked safe nearby</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid grid-2" style="margin-top:18px;">
+    <div class="card">
+      <div class="section-title">Open Shelters Near You</div>
+      <div id="shelterList"></div>
+    </div>
+
+    <div class="card">
+      <div class="section-title">Alert History</div>
+      <div id="alertHistory">
+        <p style="color:var(--muted); font-size:13px;">No alerts yet. Alerts will appear here the moment RakshaNet's Communication Agent issues one.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    RakshaNet — An Agentic AI Platform for Disaster Preparedness &amp; Emergency Response · Team Sentinel Grid · INNOVIK 6.0<br/>
+    This is a working demo prototype: sensor, weather and resource data are simulated for demonstration.
+  </footer>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/citizen.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>RakshaNet — Admin Command Dashboard</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">
+    <span class="dot"></span>
+    <div>
+      RakshaNet
+      <small>District Command Dashboard — Live Situational Picture</small>
+    </div>
+  </div>
+  <div class="topbar-actions">
+    <button class="btn btn-danger" id="simulateBtn">⚡ Simulate Flash Flood Scenario</button>
+    <button class="btn btn-outline" id="resetBtn">Reset Demo</button>
+    <a href="index.html" class="btn btn-secondary">Citizen App →</a>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="section-title">Agent Orchestration Layer (LangGraph message bus — simulated)</div>
+  <div class="agent-pipeline" id="agentPipeline">
+    <div class="agent-card" data-agent="Detection Agent">
+      <div class="icon">🛰️</div>
+      <div class="name">Detection</div>
+      <span class="badge badge-idle" data-status>Idle</span>
+    </div>
+    <div class="agent-card" data-agent="Coordination Agent">
+      <div class="icon">🧭</div>
+      <div class="name">Coordination</div>
+      <span class="badge badge-idle" data-status>Idle</span>
+    </div>
+    <div class="agent-card" data-agent="Communication Agent">
+      <div class="icon">📡</div>
+      <div class="name">Communication</div>
+      <span class="badge badge-idle" data-status>Idle</span>
+    </div>
+    <div class="agent-card" data-agent="Resource Agent">
+      <div class="icon">🚑</div>
+      <div class="name">Resource</div>
+      <span class="badge badge-idle" data-status>Idle</span>
+    </div>
+    <div class="agent-card" data-agent="Assessment Agent">
+      <div class="icon">🛰️</div>
+      <div class="name">Assessment</div>
+      <span class="badge badge-idle" data-status>Idle</span>
+    </div>
+  </div>
+
+  <div class="stat-row" style="margin-top:18px;">
+    <div class="stat-card">
+      <div class="value" id="statIncident">—</div>
+      <div class="label">Active Incident ID</div>
+    </div>
+    <div class="stat-card">
+      <div class="value" id="statShelters">—</div>
+      <div class="label">Open Shelters</div>
+    </div>
+    <div class="stat-card">
+      <div class="value" id="statTeams">—</div>
+      <div class="label">Available Relief Teams</div>
+    </div>
+    <div class="stat-card">
+      <div class="value" id="statCheckins">0</div>
+      <div class="label">Citizen Check-Ins</div>
+    </div>
+  </div>
+
+  <div class="grid grid-2" style="margin-top:6px;">
+    <div class="card">
+      <div class="section-title">Live District Map</div>
+      <div id="admin-map"></div>
+      <p style="font-size:12px; color:var(--muted); margin-top:8px;">
+        🔵 River sensors &nbsp; 🟢 Open shelters &nbsp; 🟠 Relief teams &nbsp; 🔴 Dispatched teams
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="section-title">Incident Timeline / Agent Log</div>
+      <div class="log-feed" id="logFeed">
+        <p style="color:var(--muted); font-size:13px;">No activity yet. Click "Simulate Flash Flood Scenario" to run the end-to-end walkthrough.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid grid-2" style="margin-top:18px;">
+    <div class="card">
+      <div class="section-title">Shelter &amp; Resource Status</div>
+      <table>
+        <thead>
+          <tr><th>Shelter</th><th>Occupancy</th><th>Medical</th><th>Status</th></tr>
+        </thead>
+        <tbody id="shelterTable"></tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <div class="section-title">Relief Team Deployment</div>
+      <table>
+        <thead>
+          <tr><th>Team</th><th>Type</th><th>Status</th><th>Assigned Shelter</th></tr>
+        </thead>
+        <tbody id="teamTable"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <footer>
+    RakshaNet — An Agentic AI Platform for Disaster Preparedness &amp; Emergency Response · Team Sentinel Grid · INNOVIK 6.0
+  </footer>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>
